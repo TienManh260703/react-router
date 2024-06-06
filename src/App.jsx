@@ -8,6 +8,7 @@ import LayoutDefault from './assets/layout/LayoutDefault/LayoutDefault'
 import Blog from './pages/Blog/Blog'
 import BlogNew from './pages/Blog/BlogNew'
 import BlogRelated from './pages/Blog/BlogRelated'
+import BlogAll from './pages/Blog/BlogAll'
 
 function App() {
 
@@ -19,6 +20,10 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="blog" element={<Blog />} >{/* Router lồng nhau */}
+            {/* Dùng index khong dùng path
+              Index để load component con cung component  cha
+          */}
+            <Route index element={<BlogAll />}/>
             <Route path="news" element={<BlogNew />} />
             <Route path="related" element={<BlogRelated />} />
           </Route>
