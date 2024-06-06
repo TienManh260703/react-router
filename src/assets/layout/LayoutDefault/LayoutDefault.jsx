@@ -5,6 +5,7 @@ const navLinkActive = (e) => {
     console.log(e);
     return e.isActive ? "menu__link menu__link--active" : "";
 }
+
 function LayoutDefault() {
     return (
         <>
@@ -14,14 +15,39 @@ function LayoutDefault() {
                     <div className="menu">
                         <ul>
                             <li>
-                                <NavLink to="/" className={navLinkActive}>Home</NavLink>
+                                <NavLink to="/" className={navLinkActive}>
+                                    Home
+                                </NavLink>
                                 {/* Giống Link nhưng nếu url trùng với Link thì tự động thêm class active */}
                             </li>
                             <li>
-                                <NavLink to="/about" className={navLinkActive}>About</NavLink>
+                                <NavLink to="/about" className={navLinkActive}>
+                                    About
+                                </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/contact" className={navLinkActive}>Contact</NavLink>
+                                <NavLink to="/contact" className={navLinkActive}>
+                                    Contact
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/blog" className={navLinkActive}>
+                                    Blog
+                                </NavLink>
+                                <ul className="menu__sub">
+                                    <li>
+                                        <NavLink to="/blog/news" className=
+                                            {navLinkActive}>
+                                            Blog News
+                                        </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/blog/related" className=
+                                            {navLinkActive}>
+                                            Blog Related
+                                        </NavLink>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
