@@ -19,8 +19,8 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="blog" element={<Blog />} >{/* Router lồng nhau */}
-            <Route path="blog/news" element={<BlogNew />} />
-            <Route path="blog/related" element={<BlogRelated />} />
+            <Route path="news" element={<BlogNew />} />
+            <Route path="related" element={<BlogRelated />} />
           </Route>
           <Route path="*" element={<Error404 />} />
         </Route>
