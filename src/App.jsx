@@ -9,6 +9,7 @@ import Blog from './pages/Blog/Blog'
 import BlogNew from './pages/Blog/BlogNew'
 import BlogRelated from './pages/Blog/BlogRelated'
 import BlogAll from './pages/Blog/BlogAll'
+import BlogDetail from './pages/Blog/BlogDetail'
 
 function App() {
 
@@ -23,9 +24,11 @@ function App() {
             {/* Dùng index khong dùng path
               Index để load component con cung component  cha
           */}
-            <Route index element={<BlogAll />}/>
+            <Route index element={<BlogAll />} />
             <Route path="news" element={<BlogNew />} />
             <Route path="related" element={<BlogRelated />} />
+            {/* Dynamic routes */}
+            <Route path="detail/:id" element={<BlogDetail />} />
           </Route>
           <Route path="*" element={<Error404 />} />
         </Route>

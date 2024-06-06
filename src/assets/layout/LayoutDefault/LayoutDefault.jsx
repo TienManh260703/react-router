@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import "./LayoutDefault.scss"
 
 const navLinkActive = (e) => {
-    console.log(e);
+    // console.log(e);
     return e.isActive ? "menu__link menu__link--active" : "";
 }
 

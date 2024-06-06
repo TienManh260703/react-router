@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function BlogAll() {
     const [posts, setPosts] = useState([]);
@@ -12,10 +13,13 @@ function BlogAll() {
 
     return (
         <>
+        <h1>Trang tin tức</h1>
             <ul>
                 {posts.map(item => (
                     <li key={item.id}>
-                        {item.title}
+                        <Link to={"/blog/detail/" + item.id}>
+                            {item.title}
+                        </Link> {/* Dynamic ( Đường dẫn động =>App.jsx )  */}
                     </li>
                 ))}
             </ul>
