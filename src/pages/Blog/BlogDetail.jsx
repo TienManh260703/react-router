@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import BtnGoBack from "../../components/BtnGoBack/BtnGoBack";
 
 function BlogDetail() {
 
@@ -22,7 +23,8 @@ function BlogDetail() {
 
     return (
         <>
-            Page Blog Detail
+            Page Blog Detail <br/>
+            <BtnGoBack/>
             {post && (
 
                 <>
