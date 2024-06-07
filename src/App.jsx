@@ -10,12 +10,15 @@ import BlogRelated from './pages/Blog/BlogRelated'
 import BlogAll from './pages/Blog/BlogAll'
 import BlogDetail from './pages/Blog/BlogDetail'
 import LayoutDefault from './layout/LayoutDefault/LayoutDefault'
+import InfoUser from './pages/InfoUser/InfoUser'
+import Login from './pages/Login/Login'
+import PrivateRoutes from './components/PrivateRoutes/PrivateRoutes'
 function App() {
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<LayoutDefault/>}>  {/* Sử dụng outlet để hiển thị nội dụng => dùng trong LayOutDefault  */}
+        <Route path="/" element={<LayoutDefault />}>  {/* Sử dụng outlet để hiển thị nội dụng => dùng trong LayOutDefault  */}
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
@@ -28,6 +31,10 @@ function App() {
             <Route path="related" element={<BlogRelated />} />
             {/* Dynamic routes */}
             <Route path="detail/:id" element={<BlogDetail />} />
+          </Route>
+          <Route path="login" element={<Login />} />
+          <Route element={<PrivateRoutes/>}>{/* Private route không cần path */}
+            <Route path="info-user" element={<InfoUser />} />
           </Route>
           <Route path="*" element={<Error404 />} />
         </Route>

@@ -49,6 +49,11 @@ function LayoutDefault() {
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                <NavLink to="/info-user" className={navLinkActive}>
+                                    Info User
+                                </NavLink>
+                            </li>
                         </ul>
                     </div>
                 </header>
