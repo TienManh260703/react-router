@@ -32,10 +32,13 @@ function App() {
             {/* Dynamic routes */}
             <Route path="detail/:id" element={<BlogDetail />} />
           </Route>
+
           <Route path="login" element={<Login />} />
+
           <Route element={<PrivateRoutes/>}>{/* Private route không cần path */}
             <Route path="info-user" element={<InfoUser />} />
           </Route>
+          
           <Route path="*" element={<Error404 />} />
         </Route>
       </Routes>
